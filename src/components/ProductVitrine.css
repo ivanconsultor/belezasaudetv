@@ -1,0 +1,147 @@
+:dir.vitrine-section {
+  padding: 4rem 1.5rem;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.vitrine-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vitrine-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.vitrine-header h2 {
+  font-size: 2.5rem;
+  color: #2D3748; /* Cor escura para fundo claro */
+  margin-bottom: 0.75rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.vitrine-header p {
+  color: #4A5568;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Design (Inspirado no print fornecido) */
+.vitrine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.05), 
+    0 1px 2px rgba(0, 0, 0, 0.02);
+  padding: 2rem;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+  border-color: rgba(217, 4, 74, 0.2);
+}
+
+.product-image-wrapper {
+  background-color: #ffffff;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  mix-blend-mode: multiply;
+  /* Ultra Nitidez: Equilíbrio perfeito de contraste e brilho */
+  filter: contrast(1.08) brightness(1.04) saturate(1.1);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.product-btn {
+  /* Botão roxo/rosa vibrante puxado da foto original e var primary */
+  background: linear-gradient(90deg, #A825D6 0%, var(--color-primary, #D9044A) 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  /* Botão arredondado igual o modelo WP */
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  margin-top: auto;
+  /* Empurra o botão pro final do card */
+  display: inline-block;
+}
+
+.product-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .vitrine-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .vitrine-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vitrine-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-image-wrapper {
+    height: 250px;
+  }
+}

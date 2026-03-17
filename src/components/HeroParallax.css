@@ -1,0 +1,198 @@
+.hero-parallax {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    /* Fundo vibrante radial combinando com o carmesim (#D9044A) da referência */
+    background: radial-gradient(circle at center, var(--color-accent) 0%, var(--color-primary) 100%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    padding: 40px 20px;
+}
+
+.hero-bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-heading);
+    font-size: 25vw;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.08);
+    /* Marca d'água branca sutil */
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: -5px;
+}
+
+.hero-center-content {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-main-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    /* Imagem redonda ou ovalada suaviza o layout feminino */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.1s ease-out;
+    /* Suaviza o javascript parallax */
+}
+
+.hero-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badges Flutuantes estilo Cloud9 */
+.floating-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s ease-out, filter 0.3s;
+    cursor: default;
+    z-index: 2;
+}
+
+.floating-badge:hover {
+    filter: brightness(1.1);
+    transform: scale(1.05) !important;
+}
+
+.badge-icon-box {
+    background: #FFFFFF;
+    color: var(--color-primary, #D9044A); /* Mudando a cor para combinar melhor, ou preto mantendo #333 */
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-text-box {
+    background: linear-gradient(135deg, rgba(217, 4, 74, 0.8) 0%, rgba(180, 4, 60, 0.9) 100%);
+    backdrop-filter: blur(5px);
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Posições das Badges (3 de cada lado) */
+.badge-1 { top: 15%; left: -5%; }
+.badge-2 { top: 45%; left: -15%; }
+.badge-3 { bottom: 15%; left: -5%; }
+
+.badge-4 { top: 10%; right: -10%; }
+.badge-5 { top: 40%; right: -20%; }
+.badge-6 { bottom: 20%; right: -12%; }
+
+.hero-cta {
+    z-index: 2;
+    text-align: center;
+    margin-top: -30px;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.hero-cta h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-hero {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: none;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    background-color: #f0f0f0;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+    .badge-1 { left: 0; }
+    .badge-2 { left: -5%; }
+    .badge-3 { left: 0; }
+    .badge-4 { right: 0; }
+    .badge-5 { right: -5%; }
+    .badge-6 { right: 0; }
+}
+
+@media (max-width: 900px) {
+    .hero-main-image {
+        width: 320px;
+        height: 320px;
+    }
+
+    .badge-icon-box { padding: 6px 10px; font-size: 1rem; }
+    .badge-text-box { padding: 6px 12px; font-size: 0.8rem; }
+
+    .badge-1 { top: 10%; left: 0; }
+    .badge-2 { top: 40%; left: -10px; }
+    .badge-3 { bottom: 10%; left: 0; }
+    .badge-4 { top: 5%; right: 0; }
+    .badge-5 { top: 35%; right: -10px; }
+    .badge-6 { bottom: 15%; right: 0; }
+
+    .hero-cta h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 600px) {
+    .hero-main-image {
+        width: 250px;
+        height: 250px;
+        border-width: 2px;
+    }
+
+    .floating-badge {
+        display: none;
+        /* Esconder os flutuantes no celular para não poluir */
+    }
+
+    .hero-bg-text {
+        font-size: 35vw;
+    }
+
+    .hero-cta h1 {
+        font-size: 1.8rem;
+    }
+}

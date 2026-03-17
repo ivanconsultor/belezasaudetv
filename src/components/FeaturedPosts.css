@@ -1,0 +1,134 @@
+.featured-section {
+    padding: calc(var(--spacing-base) * 10) 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 calc(var(--spacing-base) * 5);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 20px;
+}
+
+.featured-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius-sm);
+}
+
+.featured-main {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+}
+
+.featured-sub {
+    grid-column: 2;
+}
+
+.featured-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.img-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.featured-item:hover .img-wrap img {
+    transform: scale(1.05);
+}
+
+.item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: calc(var(--spacing-base) * 6);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.featured-sub .item-content {
+    padding: calc(var(--spacing-base) * 4);
+}
+
+.item-categories {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.cat-label {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+}
+
+.item-title {
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.featured-sub .item-title {
+    font-size: 1.2rem;
+}
+
+.featured-link:hover .item-title {
+    color: #ffb6d9;
+    /* Lighter shade of primary for hover text on dark bg */
+}
+
+@media (max-width: 900px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 300px 300px;
+    }
+
+    .featured-main {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .featured-sub {
+        grid-column: 1;
+    }
+}

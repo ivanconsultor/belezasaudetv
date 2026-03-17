@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* Colors */
+  --color-primary: #D9044A;
+  /* Novo tom carmesim vibrante */
+  --color-accent: #E31B54;
+  --color-bg: #F8F5F6;
+  /* Fundo um tiquinho mais quente pra casar com o vibrante */
+  --color-text-main: #333333;
+  /* Texto um pouco mais suave que preto puro */
+  --color-link: #D9044A;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-heading: 'Bai Jamjuree', sans-serif;
+  --font-body: 'Roboto', 'DM Sans', sans-serif;
+
+  --text-h1: 3.3rem;
+  /* 330px in design might refer to big headings, adapting to 3.3rem */
+  --text-h2: 2.5rem;
+  /* 67px in design -> ~2.5rem */
+  --text-body: 16px;
+
+  /* Spacing & Borders */
+  --spacing-base: 4px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-size: var(--text-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  margin-bottom: calc(var(--spacing-base) * 4);
+}
+
+h1 {
+  font-size: var(--text-h1);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--text-h2);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+/* Base Utilities */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: calc(var(--spacing-base) * 3) calc(var(--spacing-base) * 6);
+  border-radius: var(--border-radius-sm);
+  border: none;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 123, 0.3);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-lg);
+  padding: calc(var(--spacing-base) * 6);
+}

@@ -1,0 +1,7 @@
+{"_type": "category", "_id": "category-beleza", "title": "Beleza", "slug": {"_type": "slug", "current": "beleza"}, "description": "Dicas de beleza, cuidados pessoais e tendências de estilo.", "icon": "💄", "order": 1}
+{"_type": "category", "_id": "category-saude", "title": "Saúde", "slug": {"_type": "slug", "current": "saude"}, "description": "Dicas de saúde, bem-estar e qualidade de vida.", "icon": "💊", "order": 2}
+{"_type": "category", "_id": "category-cabelo", "title": "Cabelo", "slug": {"_type": "slug", "current": "cabelo"}, "description": "Tratamentos capilares, cortes e penteados da moda.", "icon": "💇", "order": 3}
+{"_type": "category", "_id": "category-pele", "title": "Pele", "slug": {"_type": "slug", "current": "pele"}, "description": "Cuidados com a pele, rotina skincare e proteção solar.", "icon": "✨", "order": 4}
+{"_type": "category", "_id": "category-emagrecimento", "title": "Emagrecimento", "slug": {"_type": "slug", "current": "emagrecimento"}, "description": "Dicas de emagrecimento, dietas saudáveis e exercícios.", "icon": "🏋️", "order": 5}
+{"_type": "category", "_id": "category-maquiagem", "title": "Maquiagem", "slug": {"_type": "slug", "current": "maquiagem"}, "description": "Tutoriais de maquiagem, resenhas e tendências.", "icon": "💅", "order": 6}
+{"_type": "category", "_id": "category-produtos", "title": "Produtos", "slug": {"_type": "slug", "current": "produtos"}, "description": "Resenhas e recomendações dos melhores produtos de beleza e saúde.", "icon": "🛍️", "order": 7}
